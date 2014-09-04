@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00AD0D7B-B555-465F-BCED-4EFF8C39759A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>dime_vs</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\..\bin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;DIME_NOT_DLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Base.cpp" />
+    <ClCompile Include="..\..\src\Basic.cpp" />
+    <ClCompile Include="..\..\src\classes\Class.cpp" />
+    <ClCompile Include="..\..\src\classes\UnknownClass.cpp" />
+    <ClCompile Include="..\..\src\convert\3dfaceconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\arcconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\circleconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\convert.cpp" />
+    <ClCompile Include="..\..\src\convert\ellipseconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\layerdata.cpp" />
+    <ClCompile Include="..\..\src\convert\lineconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\linesegment.cpp" />
+    <ClCompile Include="..\..\src\convert\lwpolylineconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\pointconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\polylineconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\solidconvert.cpp" />
+    <ClCompile Include="..\..\src\convert\traceconvert.cpp" />
+    <ClCompile Include="..\..\src\entities\3DFace.cpp" />
+    <ClCompile Include="..\..\src\entities\Arc.cpp" />
+    <ClCompile Include="..\..\src\entities\Block.cpp" />
+    <ClCompile Include="..\..\src\entities\Circle.cpp" />
+    <ClCompile Include="..\..\src\entities\Ellipse.cpp" />
+    <ClCompile Include="..\..\src\entities\Entity.cpp" />
+    <ClCompile Include="..\..\src\entities\ExtrusionEntity.cpp" />
+    <ClCompile Include="..\..\src\entities\FaceEntity.cpp" />
+    <ClCompile Include="..\..\src\entities\Insert.cpp" />
+    <ClCompile Include="..\..\src\entities\Line.cpp" />
+    <ClCompile Include="..\..\src\entities\LWPolyline.cpp" />
+    <ClCompile Include="..\..\src\entities\Point.cpp" />
+    <ClCompile Include="..\..\src\entities\Polyline.cpp" />
+    <ClCompile Include="..\..\src\entities\Solid.cpp" />
+    <ClCompile Include="..\..\src\entities\Spline.cpp" />
+    <ClCompile Include="..\..\src\entities\Text.cpp" />
+    <ClCompile Include="..\..\src\entities\Trace.cpp" />
+    <ClCompile Include="..\..\src\entities\UnknownEntity.cpp" />
+    <ClCompile Include="..\..\src\entities\Vertex.cpp" />
+    <ClCompile Include="..\..\src\Input.cpp" />
+    <ClCompile Include="..\..\src\Layer.cpp" />
+    <ClCompile Include="..\..\src\Model.cpp" />
+    <ClCompile Include="..\..\src\objects\Object.cpp" />
+    <ClCompile Include="..\..\src\objects\UnknownObject.cpp" />
+    <ClCompile Include="..\..\src\Output.cpp" />
+    <ClCompile Include="..\..\src\RecordHolder.cpp" />
+    <ClCompile Include="..\..\src\records\DoubleRecord.cpp" />
+    <ClCompile Include="..\..\src\records\FloatRecord.cpp" />
+    <ClCompile Include="..\..\src\records\HexRecord.cpp" />
+    <ClCompile Include="..\..\src\records\Int16Record.cpp" />
+    <ClCompile Include="..\..\src\records\Int32Record.cpp" />
+    <ClCompile Include="..\..\src\records\Int8Record.cpp" />
+    <ClCompile Include="..\..\src\records\Record.cpp" />
+    <ClCompile Include="..\..\src\records\StringRecord.cpp" />
+    <ClCompile Include="..\..\src\sections\BlocksSection.cpp" />
+    <ClCompile Include="..\..\src\sections\ClassesSection.cpp" />
+    <ClCompile Include="..\..\src\sections\EntitiesSection.cpp" />
+    <ClCompile Include="..\..\src\sections\HeaderSection.cpp" />
+    <ClCompile Include="..\..\src\sections\ObjectsSection.cpp" />
+    <ClCompile Include="..\..\src\sections\Section.cpp" />
+    <ClCompile Include="..\..\src\sections\TablesSection.cpp" />
+    <ClCompile Include="..\..\src\sections\UnknownSection.cpp" />
+    <ClCompile Include="..\..\src\State.cpp" />
+    <ClCompile Include="..\..\src\tables\LayerTable.cpp" />
+    <ClCompile Include="..\..\src\tables\Table.cpp" />
+    <ClCompile Include="..\..\src\tables\TableEntry.cpp" />
+    <ClCompile Include="..\..\src\tables\UCSTable.cpp" />
+    <ClCompile Include="..\..\src\tables\UnknownTable.cpp" />
+    <ClCompile Include="..\..\src\util\Array.cpp" />
+    <ClCompile Include="..\..\src\util\Box.cpp" />
+    <ClCompile Include="..\..\src\util\BSPTree.cpp" />
+    <ClCompile Include="..\..\src\util\Dict.cpp" />
+    <ClCompile Include="..\..\src\util\Linear.cpp" />
+    <ClCompile Include="..\..\src\util\MemHandler.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\convert\convert_funcs.h" />
+    <ClInclude Include="..\..\src\convert\linesegment.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
