@@ -15,6 +15,7 @@
 
 [Dd]ebug/
 [Rr]elease/
+[Rr]elease_profiling/
 x64/
 build/
 #[Bb]in/
